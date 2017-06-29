@@ -9,6 +9,17 @@ var Book = function (name, price) {
     };
 
     this.price = function (val) {
+        if(val !== undefined && val !== price) {
+            for (var i = 0; i < priceChanging.length; i++) {
+                if(!priceChanging[i](this, val)){
+                    return price;
+                }
+            }
+            price = val;
+            for (var i = 0; i < priceChanged.length; i++) {
+                priceChanged[i](this);
+            }
+        }
         return price;
     };
 

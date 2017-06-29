@@ -1,5 +1,5 @@
 
-//
+// Function Argument Pattern
 
 function myFunc(a,b,c) {
     return a + b + c;
@@ -15,4 +15,5 @@ console.log(myFunc(1,2)); // This will cause an error as there is no 'c', and it
         // 6
         // NaN
 
-        
+// To solve this possible issue, we can use an Argument Object
+

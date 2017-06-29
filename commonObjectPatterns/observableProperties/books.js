@@ -3,11 +3,11 @@
 
 var Book = function (name, price) {
     this.name = function (val) {
-
+        return name;
     };
 
     this.price = function (val) {
-
+        return price;
     };
 
     this.onPriceChanging = function (callback) {

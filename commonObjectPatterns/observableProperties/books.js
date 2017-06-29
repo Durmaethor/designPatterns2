@@ -2,6 +2,8 @@
 // This shows us how to use "Methods as Properties" design pattern
 
 var Book = function (name, price) {
+    var priceChanging = [];
+        priceChanged = [];
     this.name = function (val) {
         return name;
     };
@@ -11,11 +13,11 @@ var Book = function (name, price) {
     };
 
     this.onPriceChanging = function (callback) {
-
+        priceChanging.push(callback);
     };
 
     this.onPriceChanged = function (callback) {
-
+        priceChanged.push(callback);
     };
 };
 

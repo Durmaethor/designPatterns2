@@ -1,3 +1,6 @@
+
+// Chaining helps to reduce character length. The idea behind the chain design pattern is to return the value of this, or at least an object that represents the next point in your API call, allowing the user to execute continuous functions based off of that.
+
 var Calc = function (start) {
     var that = this;
     this.add = function(x) {
